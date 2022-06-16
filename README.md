@@ -7,7 +7,7 @@ This crate includes the [rp2040-hal], but also configures each pin of the
 RP2040 chip according to how it is connected up on the Stamp
 
 [Solder Party RP2040 Stamp]: https://www.solder.party/docs/rp2040-stamp/
-[solderparty-rp2040-stamp]: https://github.com/rp-rs/rp-hal/tree/main/boards/solderparty-rp2040-stamp
+[solderparty-rp2040-stamp]: https://github.com/rp-rs/solderparty-rp2040-stamp
 [rp2040-hal]: https://github.com/rp-rs/rp-hal/tree/main/rp2040-hal
 [Raspberry Silicon RP2040]: https://www.raspberrypi.org/products/rp2040/
 
@@ -16,7 +16,7 @@ RP2040 chip according to how it is connected up on the Stamp
 To use this crate, your `Cargo.toml` file should contain:
 
 ```toml
-solderparty-rp2040-stamp = "0.1.0"
+solderparty-rp2040-stamp = "0.2.0"
 ```
 
 In your program, you will need to call `solderparty_rp2040_stamp::Pins::new` to create
@@ -30,7 +30,7 @@ devices. See the [examples](./examples) folder for more details.
 To compile an example, clone the _rp-hal_ repository and run:
 
 ```console
-rp-hal/boards/solderparty-rp2040-stamp $ cargo build --release --example <name>
+solderparty-rp2040-stamp $ cargo build --release --example <name>
 ```
 
 You will get an ELF file called
@@ -44,7 +44,7 @@ USB drive exported by the RP2040 bootloader, simply boot your board into
 bootloader mode and run:
 
 ```console
-rp-hal/boards/solderparty-rp2040-stamp $ cargo run --release --example <name>
+solderparty-rp2040-stamp $ cargo run --release --example <name>
 ```
 
 If you get an error about not being able to find `elf2uf2-rs`, try:
